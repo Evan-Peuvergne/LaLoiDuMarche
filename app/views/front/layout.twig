@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	
+	<title>La loi du marché</title>
+	
+	<meta charset="UTF-8">
+	<meta name="root" content="{{ app.request.basepath }}">
+
+	<style>
+		html{ box-sizing:border-box; position:absolute; top:0; left:0; width: 100%; height:100%; background-image:url({{ app.request.basepath }}/assets/front/medias/images/background.jpg); background-size:cover; background-position:center; overflow: visible; padding:0; animation-name:'BackgroundImageFadeIn'; -webkit-animation-name:'BackgroundImageFadeIn'; animation-duration:1s; -webkit-animation-duration:1s; animation-timing-function:ease; -webkit-animation-timing-function:ease; animation-delay:1s; -webkit-animation-delay:1s; animation-fill-mode:both; -webkit-animation-fill-mode:both;}
+		body{ box-sizing:border-box; width:calc(100% - 40px); height:calc(100% - 40px); margin-top:20px; margin-left:20px; border:4px solid #FEFEFE; }
+		.hamburger{ display: none; }
+		nav{ display: none; }
+		@-webkit-keyframes BackgroundImageFadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+		@keyframes BackgroundImageFadeIn { 0% { opacity: 0; } 100% {opacity: 1; } }
+	</style>
+
+</head>
+
+<body>
+
+	<a class="hamburger" href="">
+		<svg width="44px" height="36px" viewBox="0 0 44 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+            <!-- <g id="Hamburger" sketch:type="MSLayerGroup" transform="" stroke="#FEFEFE" stroke-width="2"> -->
+                <path d="M0,2 L40,2" id="Line" sketch:type="MSShapeGroup"></path>
+                <path d="M0,18 L40,18" id="Line-2" sketch:type="MSShapeGroup"></path>
+                <path d="M0,34 L40,34" id="Line-3" sketch:type="MSShapeGroup"></path>
+            <!-- </g> -->
+		</svg>
+	</a>
+
+	<nav>
+		<ul>
+			<li data-menu="home"><a href="#"><span>Home</span></a></li>
+			<li data-menu="film"><a href="#"><span>Le film</span></a></li>
+			<li data-menu="news"><a href="#"><span>News</span></a></li>
+			<li data-menu="reviews"><a href="#"><span>Reviews</span></a></li>
+		</ul>
+	</nav>
+
+	<div class="loader"></div>
+
+</body>
+
+</html>
+
+
+<script src="{{ app.request.basepath }}/assets/front/js/libraries/jquery.js"></script>
+
+<script src="{{ app.request.basepath }}/assets/front/js/libraries/handlebars.js"></script>
+<script src="{{ app.request.basepath }}/assets/front/js/libraries/mousewheel.js"></script>
+<script src="{{ app.request.basepath }}/assets/front/js/libraries/scrollpane.js"></script>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '824346530974888',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script src="{{ app.request.basepath }}/assets/front/js/objects/App.js"></script>
+<script src="{{ app.request.basepath }}/assets/front/js/objects/Page.js"></script>
+<script src="{{ app.request.basepath }}/assets/front/js/objects/Home.js"></script>
+<script src="{{ app.request.basepath }}/assets/front/js/objects/Film.js"></script>
+<script src="{{ app.request.basepath }}/assets/front/js/objects/News.js"></script>
+<script src="{{ app.request.basepath }}/assets/front/js/objects/Article.js"></script>
+<script src="{{ app.request.basepath }}/assets/front/js/objects/Reviews.js"></script>
+<script src="{{ app.request.basepath }}/assets/front/js/objects/Review.js"></script>
+
+<script src="{{ app.request.basepath }}/assets/front/js/scripts/main.js"></script>
+

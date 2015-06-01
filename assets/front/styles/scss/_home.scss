@@ -1,0 +1,120 @@
+	
+	
+	// Styles
+
+	.container{
+
+		display:flex;
+		width:100%;
+		height:100%;
+		justify-content:center;
+		align-items:center;
+		color:$white;
+		
+
+		// Title
+
+		.title{
+
+			h1{
+
+				font-size:4rem;
+				text-transform: uppercase;
+				letter-spacing:0.3rem;
+				margin-bottom:1rem;
+				text-align:center;
+				color:$white;
+
+				span{
+
+					color:$red;
+
+				}
+
+
+				@media (max-width:600px){
+
+					margin-bottom:4rem;
+
+				}
+
+			}
+
+			h2{
+
+				display: block;
+				width:50%;
+				float:left;
+				font-size:1.5rem;
+				font-family: $font-serif;
+
+				span{
+
+					text-transform: uppercase;
+
+				}
+
+				&:last-child{
+
+					text-align:right;
+
+				}
+
+
+				@media (max-width:600px){
+
+					width:100%;
+					text-align:center;
+					margin-bottom:1rem;
+
+					&:last-child{
+
+						margin-bottom:0;
+						text-align:center;
+
+					}
+
+				}
+
+			}
+
+		}
+
+
+		// Button
+
+		.btn-trailer{
+
+			display: inline-block;
+			position:absolute;
+			left:50%;
+			bottom:3rem;
+			transform:translateX(-50%);
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size:0.8rem;
+			border:2px solid $white;
+			border-radius:100px;
+			padding:0.6rem 1.2rem;
+
+
+			@media (max-width:600px){
+
+				font-size:1rem;
+
+			}
+
+		}
+
+	}
+
+
+	// Intro
+
+	&.show{
+
+		
+		
+
+
+	}

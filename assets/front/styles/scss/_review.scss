@@ -1,0 +1,318 @@
+
+
+	/* CONTAINER */
+
+
+	&{
+		
+		opacity:0;
+		position:absolute !important;
+		z-index:500;
+		top:0;
+		right:0;
+		width:calc(300px + #{$container-padding*2}) !important;
+		height:100%;
+		background-color:$white;
+		padding-bottom:2rem;
+
+		@media (max-width: 450px){
+	
+			width:calc(100% - #{$container-padding*2} - 30px) !important;
+
+		}
+
+
+		// Close button
+
+		.close{
+
+			display: block;
+			width:30px;
+			height:30px;
+			position:absolute;
+			z-index:3000;
+			top:$container-padding;
+			left:-2*$container-padding;
+
+			img{
+
+				display: block;
+				width:100%;
+				height:auto;
+
+			}
+
+		}
+
+	}
+
+
+
+
+
+
+	/* AUTHOR */
+
+
+	.review-author{
+
+		width:300px;
+		height:300px;
+		position:relative;
+		margin-bottom:2rem;
+
+		img{
+
+			display: block;
+			width:300px;
+			height:300px;
+
+		}
+
+		.overlay{
+			
+			display: flex;
+			flex-direction:column;
+			justify-content:flex-end;
+			padding:1.5rem;
+			position:absolute;
+			z-index:300;
+			top:0;
+			left:0;
+			height:300px;
+			width:300px;
+			background-color:rgba($black, 0.6);
+			color:rgba($white, 0.8);
+
+			h2{
+				
+				font-size:2rem;
+				text-transform: uppercase;
+				margin-bottom:0.8rem;
+				font-weight:200;
+				letter-spacing:0.2rem;
+				line-height:1.2;
+
+			}
+
+			span.date{
+
+				font-size:1rem;
+				font-weight: 800;
+				margin-left:0.1rem;
+
+			}
+
+		}
+
+		span.note{
+			
+			display: flex;
+			justify-content:center;
+			align-items:center;
+			position:absolute;
+			z-index:200;
+			top:0;
+			left:0;
+			width:300px;
+			height:300px;
+			font-family: $font-serif;
+			font-size:300px;
+			color:rgba($white, 0.5);
+
+		}
+
+	}
+
+	.review-content{
+
+		font-size:1rem;
+		color:rgba($black, 0.6);
+		width:100%;
+		line-height:1.3;
+		padding-left:0.1rem;
+		margin-bottom:4rem;
+
+		span{
+
+			font-size:1rem;
+			font-weight:700;
+			color:$black;
+			display: block;
+
+		}
+
+	}
+
+
+
+
+
+
+	/* RESPONSE */
+
+
+	.review-response{
+
+		margin-bottom:4rem;
+		text-align:right;
+
+		span{
+			
+			display: block;
+			text-align:left;
+			font-size:0.9rem;
+			text-transform: uppercase;
+			color:rgba($black, 0.6);
+			margin-bottom:1rem;
+
+		}
+
+		textarea{
+			
+			display: block;
+			width:100%;
+			color:rgba($black, 0.6);
+			background-color:rgba($black, 0.03);
+			padding:1rem;
+			padding-bottom:2rem;
+			font-size:0.9rem;
+			overflow: auto;
+			margin-right:-0.1rem;
+			line-height:1.3;
+			height:10rem;
+			margin-bottom:1rem;
+
+		}
+
+		input[type=submit]{
+
+			background-color:#3B5998;
+			color:$white;
+			text-transform: uppercase;
+			padding:0.4rem 0.8rem;
+			height:2rem;
+			font-size:0.8rem;
+			cursor:pointer;
+
+		}
+
+	}
+
+
+
+
+
+	/* RESPONSES */
+
+
+	.review-responses{
+
+		margin-bottom:1rem;
+
+
+		span{
+			
+			display: block;
+			font-size:0.9rem;
+			text-transform: uppercase;
+			color:rgba($black, 0.6);
+			margin-bottom:2rem;
+
+		}
+
+		p{
+
+			text-transform: none;
+			font-size:0.8rem;
+			color: rgba($black, 0.6);
+
+		}
+
+		.response{
+
+			margin-bottom:2rem;
+			min-height:70px;
+
+			img{
+
+				display: inline-block;
+				width:70px;
+				height:70px;
+				float:left;
+
+			}
+
+			p{
+				
+				display: inline-block;
+				width:calc(100% - 70px - 2rem);
+				margin-left:1rem; 
+				font-size:0.9rem;
+				color:rgba($black, 0.6);
+
+				span{
+	
+					display: block;
+					font-weight:700;
+					color:rgba($black, 0.8);
+					margin-bottom:0.5rem;
+					text-transform: none;
+					
+					&:after{
+
+						content:'.';
+					}
+
+				}
+
+			}			
+
+		}
+
+	}
+
+
+
+
+
+
+
+	/* SCROLL */
+
+
+	.jspDrag{
+
+		background-color:rgba($black, 0.5);
+
+	}	
+
+
+
+
+
+
+
+	/* ANIMATION */
+
+
+	&.show{
+		
+		display: block;
+		animation-name:'ReviewEnter';
+		animation-duration:1s;
+		animation-timing-function:ease;
+		animation-fill-mode:both;
+
+	}
+
+
+	&.leave{
+		
+		display: block;
+		animation-name:'ReviewLeave';
+		animation-duration:1s;
+		animation-timing-function:ease;
+		animation-fill-mode:both;
+
+	}

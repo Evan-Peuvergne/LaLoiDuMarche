@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../styles/css/app.css">
+
+</head>
+
+<body>
+
+	<a class="hamburger active" href="">
+		<svg width="44px" height="36px" viewBox="0 0 44 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+            <!-- <g id="Hamburger" sketch:type="MSLayerGroup" transform="" stroke="#FEFEFE" stroke-width="2"> -->
+                <path d="M0,2 L40,2" id="Line" sketch:type="MSShapeGroup"></path>
+                <path d="M0,18 L40,18" id="Line-2" sketch:type="MSShapeGroup"></path>
+                <path d="M0,34 L40,34" id="Line-3" sketch:type="MSShapeGroup"></path>
+            <!-- </g> -->
+		</svg>
+	</a>
+
+	<nav>
+		<ul>
+			<li data-menu="home"><a href="#"><span>Home</span></a></li>
+			<li data-menu="film"><a href="#"><span>Le film</span></a></li>
+			<li data-menu="news"><a href="#"><span>News</span></a></li>
+			<li data-menu="reviews"><a href="#"><span>Reviews</span></a></li>
+		</ul>
+	</nav>
+
+	<div class="page page-home show">
+		<div class="container">
+
+			<div class="title">
+				<h1>La <span>loi</span> du marché</h1>
+				<h2>avec <span>Vicent Lindon</span></h2>
+				<h2>un film de <span>Stéphane Brizé</span></h2>
+			</div>
+
+			<a href="#" class="btn btn-trailer">
+				<span>Bande annonce</span>
+			</a>
+
+		</div>
+	</div>
+
+	<div class="trailer active">
+		<video>
+			<source src="../medias/videos/trailer.mp4">
+			<source src="../medias/videos/trailer.ogg">
+			<source src="../medias/videos/trailer.webm">
+		</video>
+		<div class="frame"></div>
+		<a class="close" href="#">
+			<img src="../medias/images/close.svg" alt="">
+		</a>
+	</div>
+
+</body>
+
+</html>
+
+
+<script src="../js/libraries/jquery.js"></script>
+<script src="../js/libraries/mousewheel.js"></script>
+<script src="../js/libraries/scrollpane.js"></script>
+
+<script>
+	
+
+	$(document).ready(function ()
+	{
+
+		$('.scroll').jScrollPane();
+
+		$('.hamburger').click(function (e)
+		{
+			e.preventDefault();
+			if($(this).hasClass('opened'))
+			{ 
+				$(this).removeClass('opened');
+				$('nav').addClass('closed').removeClass('opened');
+
+				setTimeout(function ()
+				{
+					$('nav').removeClass('closed');
+				}, 1000);
+			}
+			else
+			{
+				$(this).addClass('opened'); 
+				$('nav').addClass('opened').removeClass('closed');
+			}
+		});	
+
+	});
+
+
+</script>

@@ -1,0 +1,245 @@
+
+
+	/* MENU */
+
+
+	// MenuOpenItems
+
+	@keyframes MenuOpenItems {
+
+		0%{
+
+			transform:translateY(-3rem);
+			opacity:0;
+
+		}
+
+		100%{
+
+			transform:none;
+			opacity:1;
+
+		}
+
+	}
+
+
+	// MenuCloseItems
+
+	@keyframes MenuCloseItems {
+
+		0%{
+
+			transform:none;
+			opacity:1;
+
+		}
+
+		100%{
+
+			transform:translateY(3rem);
+			opacity:0;
+
+		}
+
+	}
+
+
+	// BackgroundImageFadeIn
+
+	@keyframes BackgroundImageFadeIn {
+
+		0%{
+
+			opacity:0;
+
+		}
+
+		100%{
+
+			opacity:1;
+
+		}
+
+	}
+
+
+	// MenuOpen
+
+	@keyframes MenuOpen {
+
+		0%{
+			
+			display: block;
+			opacity:0;
+
+		}
+
+		100%{
+
+			display: block;
+			opacity:1;
+
+		}
+
+	}
+
+
+	// MenuClose
+
+	@keyframes MenuClose {
+
+		0%{
+
+			display: block;
+			opacity:1;
+
+		}
+
+		99%{
+
+			display: block;
+			opacity:0;
+
+		}
+
+		100%{
+
+			display: none;
+			opacity:0;
+
+		}
+
+	}
+
+
+	// ReviewEnter
+
+	@keyframes ReviewEnter {
+
+		0%{
+
+			opacity:0;
+			transform:translateX(3rem);
+
+		}
+
+		100%{
+
+			opacity:1;
+			transform:none;
+
+		}
+
+	}
+
+
+	// ReviewLeave
+
+	@keyframes ReviewLeave {
+
+		0%{
+
+			opacity:1;
+			transform:none;
+
+		}
+
+		0%{
+
+			opacity:0;
+			transform:translateX(3rem);
+
+		}
+
+	}
+
+
+
+
+
+	/* BASICS */
+
+
+	// FadeIn
+
+	@keyframes FadeIn {
+
+		0%{
+			
+			// transform:translateY(-2rem);
+			opacity:0;
+
+		}
+
+		100%{
+
+			// transform:none;
+			opacity:1;
+
+		}
+
+	}
+
+
+	// FadeOut
+
+	@keyframes FadeOut {
+
+		0%{
+
+			opacity:1;
+
+		}
+
+		100%{
+
+			opacity:0;
+
+		}
+
+	}
+	
+
+	// SlideIn
+
+	@keyframes SlideIn {
+
+		0%{
+
+			opacity:0;
+			transform:translateY(-2rem);
+
+		}
+
+		100%{
+
+			opacity:1;
+			transform:none;
+
+		}
+
+	}
+
+
+	// SlideOut
+
+	@keyframes SlideOut {
+
+		0%{
+
+			opacity:1;
+			transform:none;
+
+		}
+
+		100%{
+
+			opacity:0;
+			transform:translateY(2rem);
+
+		}
+
+	}
+
+

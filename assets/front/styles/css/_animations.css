@@ -1,0 +1,263 @@
+/* MENU */
+@-webkit-keyframes MenuOpenItems {
+  /* line 10, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    -webkit-transform: translateY(-3rem);
+            transform: translateY(-3rem);
+    opacity: 0; }
+
+  /* line 17, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1; } }
+@keyframes MenuOpenItems {
+  /* line 10, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    -webkit-transform: translateY(-3rem);
+            transform: translateY(-3rem);
+    opacity: 0; }
+
+  /* line 17, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1; } }
+
+@-webkit-keyframes MenuCloseItems {
+  /* line 31, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1; }
+
+  /* line 38, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0; } }
+
+@keyframes MenuCloseItems {
+  /* line 31, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1; }
+
+  /* line 38, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0; } }
+
+@-webkit-keyframes BackgroundImageFadeIn {
+  /* line 52, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    opacity: 0; }
+
+  /* line 58, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    opacity: 1; } }
+
+@keyframes BackgroundImageFadeIn {
+  /* line 52, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    opacity: 0; }
+
+  /* line 58, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes MenuOpen {
+  /* line 71, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    display: block;
+    opacity: 0; }
+
+  /* line 78, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    display: block;
+    opacity: 1; } }
+
+@keyframes MenuOpen {
+  /* line 71, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    display: block;
+    opacity: 0; }
+
+  /* line 78, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    display: block;
+    opacity: 1; } }
+
+@-webkit-keyframes MenuClose {
+  /* line 92, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    display: block;
+    opacity: 1; }
+
+  /* line 99, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  99% {
+    display: block;
+    opacity: 0; }
+
+  /* line 106, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    display: none;
+    opacity: 0; } }
+
+@keyframes MenuClose {
+  /* line 92, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    display: block;
+    opacity: 1; }
+
+  /* line 99, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  99% {
+    display: block;
+    opacity: 0; }
+
+  /* line 106, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    display: none;
+    opacity: 0; } }
+
+@-webkit-keyframes ReviewEnter {
+  /* line 120, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(3rem);
+            transform: translateX(3rem); }
+
+  /* line 127, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes ReviewEnter {
+  /* line 120, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(3rem);
+            transform: translateX(3rem); }
+
+  /* line 127, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes ReviewLeave {
+  /* line 141, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; }
+
+  /* line 148, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(3rem);
+            transform: translateX(3rem); } }
+
+@keyframes ReviewLeave {
+  /* line 141, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; }
+
+  /* line 148, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(3rem);
+            transform: translateX(3rem); } }
+
+/* BASICS */
+@-webkit-keyframes FadeIn {
+  /* line 168, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    opacity: 0; }
+
+  /* line 175, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    opacity: 1; } }
+@keyframes FadeIn {
+  /* line 168, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    opacity: 0; }
+
+  /* line 175, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes FadeOut {
+  /* line 189, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    opacity: 1; }
+
+  /* line 195, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    opacity: 0; } }
+
+@keyframes FadeOut {
+  /* line 189, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    opacity: 1; }
+
+  /* line 195, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes SlideIn {
+  /* line 208, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem); }
+
+  /* line 215, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes SlideIn {
+  /* line 208, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem); }
+
+  /* line 215, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes SlideOut {
+  /* line 229, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; }
+
+  /* line 236, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem); } }
+
+@keyframes SlideOut {
+  /* line 229, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; }
+
+  /* line 236, /Users/evanpeuvergne/Documents/Hetic/Trimestre 3/Dev/Devoir/Dev/assets/front/styles/scss/_animations.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem); } }

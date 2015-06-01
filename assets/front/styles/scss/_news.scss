@@ -1,0 +1,164 @@
+	
+
+	/* CONTAINER */
+
+
+	.container{
+
+		.content{
+
+			width:100%;
+
+		}
+
+	}
+
+
+
+
+
+
+	/* SCROLL */
+
+
+	.jspDrag{
+
+		background-color:rgba($black, 0.5);
+
+	}
+
+
+
+
+
+
+
+	/* NEWS */
+
+
+	.news{
+
+		article{
+
+			width:calc(33% - 15px);
+			display: inline-block;
+			vertical-align: top;
+			margin-right:22px;
+			margin-bottom:5rem;
+
+			a{
+
+				width:100%;
+				text-decoration: none;
+
+			}
+
+			img{
+
+				display: block;
+				width:100%;
+				height:auto;
+				margin-bottom:2rem;
+
+			}	
+
+			h2{
+
+				text-decoration: none;
+				font-size:1.4rem;
+				letter-spacing: 0;
+				line-height:1.3;
+				margin-bottom:1rem;
+
+			}
+
+
+			// Responsive
+
+			@media (min-width:701px){
+
+				&:nth-child(3n){
+
+					margin-right:0;
+
+				}
+
+				&:nth-last-child(-n+3){
+
+					margin-bottom:0;
+
+				}
+
+			}
+
+			@media (max-width:700px){ 
+
+				width:calc(50% - 24px); 
+
+				&:nth-child(2n){
+
+					margin-right:0;
+
+				}
+
+				&:nth-last-child(-n+2){
+
+					margin-bottom:0;
+
+				}
+
+			}
+
+			@media (max-width: 500px){ 
+			
+				width:calc(100%);
+				margin-right:0;
+
+				&:last-child{
+
+					margin-bottom:0;
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+
+
+
+	/* LEAVE */
+
+
+	&.leave{
+
+		
+		// Title
+
+		h1{
+
+			animation-name:'SlideOut';
+			animation-duration:1s;
+			animation-delay:0.2s;
+			animation-timing-function:ease;
+			animation-fill-mode:both;
+
+		}
+
+
+		// News
+
+		.news{
+						
+			animation-name:'SlideOut';
+			animation-duration:0.5s;
+			animation-timing-function:ease;
+			animation-fill-mode:both;
+
+		}
+
+	}

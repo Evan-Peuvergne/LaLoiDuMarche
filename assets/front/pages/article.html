@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../styles/css/app.css">
+
+</head>
+
+<body>
+
+	<a class="hamburger active" href="">
+		<svg width="44px" height="36px" viewBox="0 0 44 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+            <path d="M0,2 L40,2" id="Line" sketch:type="MSShapeGroup"></path>
+            <path d="M0,18 L40,18" id="Line-2" sketch:type="MSShapeGroup"></path>
+            <path d="M0,34 L40,34" id="Line-3" sketch:type="MSShapeGroup"></path>
+		</svg>
+	</a>
+
+	<nav class="">
+		<ul>
+			<li data-menu="home"><a href="#"><span>Home</span></a></li>
+			<li data-menu="film"><a href="#"><span>Le film</span></a></li>
+			<li data-menu="news"><a href="#"><span>News</span></a></li>
+			<li data-menu="reviews"><a href="#"><span>Reviews</span></a></li>
+		</ul>
+	</nav>
+
+	<div class="page page-article show scroll">
+
+		<div class="container">
+
+			<div class="content-fixed" style="background-image:url(../medias/images/critiques.jpg);">
+				
+				<h1>Vincent Lindon : portrait d'un surdoué</h1>
+
+				<div class="article-infos">
+					<span>Il y a 11 jours</span>
+					<span>711 vues</span>
+				</div>
+
+			</div>
+
+
+			<div class="content">
+
+				<!-- <div class="article-stats">
+					<span class="date">Il y a 2 jours</span>
+					<span class="views">711 vues</span>
+					<span class="likes">100 <a href="#"><i class="icon-4"></i></a></span>
+				</div> -->
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero facilis nihil culpa sapiente asperiores consectetur inventore omnis corporis quam similique, nobis blanditiis, ipsum nemo incidunt ratione ea, expedita. Iure, itaque.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione cumque amet neque ad delectus perspiciatis doloribus possimus fuga similique suscipit architecto facilis, atque quibusdam ipsam veritatis, quod quis! Fugiat, beatae.
+				</p>
+
+				<div class="article-photo">
+					<img src="../medias/images/critiques.jpg" alt="">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero alias molestiae cumque</p>
+				</div>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero facilis nihil culpa sapiente asperiores consectetur inventore omnis corporis quam similique, nobis blanditiis, ipsum nemo incidunt ratione ea, expedita. Iure, itaque.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione cumque amet neque ad delectus perspiciatis doloribus possimus fuga similique suscipit architecto facilis, atque quibusdam ipsam veritatis, quod quis! Fugiat, beatae.
+				</p>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="loader">
+		<div class="progress"></div>
+	</div>
+
+</body>
+
+</html>
+
+
+<script src="../js/libraries/jquery.js"></script>
+<script src="../js/libraries/mousewheel.js"></script>
+<script src="../js/libraries/scrollpane.js"></script>
+
+<script>
+	
+
+	$(document).ready(function ()
+	{
+
+		$('.scroll').jScrollPane({
+			contentWidth: '0px',
+			verticalDragMaxHeight: 100,
+			verticalDragMinHeight: 100
+		});
+
+		$('.hamburger').click(function (e)
+		{
+			e.preventDefault();
+			if($(this).hasClass('opened'))
+			{ 
+				$(this).removeClass('opened');
+				$('nav').addClass('closed').removeClass('opened');
+
+				setTimeout(function ()
+				{
+					$('nav').removeClass('closed');
+				}, 1000);
+			}
+			else
+			{
+				$(this).addClass('opened'); 
+				$('nav').addClass('opened').removeClass('closed');
+			}
+		});	
+
+		$('nav a').click(function (e)
+		{
+			e.preventDefault();
+			$('.page').remove();
+			$('nav').addClass('closed').removeClass('opened');
+			$('body').addClass('loading').removeClass('loaded');
+		});
+
+	});
+
+
+</script>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../styles/css/app.css">
+
+</head>
+
+<body>
+
+	<a class="hamburger active" href="">
+		<svg width="44px" height="36px" viewBox="0 0 44 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+            <path d="M0,2 L40,2" id="Line" sketch:type="MSShapeGroup"></path>
+            <path d="M0,18 L40,18" id="Line-2" sketch:type="MSShapeGroup"></path>
+            <path d="M0,34 L40,34" id="Line-3" sketch:type="MSShapeGroup"></path>
+		</svg>
+	</a>
+
+	<nav class="">
+		<ul>
+			<li data-menu="home"><a href="#"><span>Home</span></a></li>
+			<li data-menu="film"><a href="#"><span>Le film</span></a></li>
+			<li data-menu="news"><a href="#"><span>News</span></a></li>
+			<li data-menu="reviews"><a href="#"><span>Reviews</span></a></li>
+		</ul>
+	</nav>
+
+	<div class="page page-reviews show disabled">
+
+		<a href="#" class="close">
+			<img src="../medias/images/close.svg" alt="">
+		</a>
+
+		<div class="container">
+
+			<h1>Reviews</h1>
+
+			<div class="reviews">
+				
+				<a href="#" class="review">
+					<img src="../medias/images/vincent_lindon.jpg" alt="">
+					<div class="overlay">
+						<span class="note">5</span>
+						<span class="name">Evan Peuvergne</span>
+					</div>
+				</a>
+				<a href="#" class="review">
+					<img src="../medias/images/vincent_lindon.jpg" alt="">
+					<div class="overlay">
+						<span class="note">5</span>
+						<span class="name">Evan Peuvergne</span>
+					</div>
+				</a>
+				<a href="#" class="review">
+					<img src="../medias/images/vincent_lindon.jpg" alt="">
+					<div class="overlay">
+						<span class="note">5</span>
+						<span class="name">Evan Peuvergne</span>
+					</div>
+				</a>
+				<a href="#" class="review">
+					<img src="../medias/images/vincent_lindon.jpg" alt="">
+					<div class="overlay">
+						<span class="note">5</span>
+						<span class="name">Evan Peuvergne</span>
+					</div>
+				</a>
+				<a href="#" class="review">
+					<img src="../medias/images/vincent_lindon.jpg" alt="">
+					<div class="overlay">
+						<span class="note">5</span>
+						<span class="name">Evan Peuvergne</span>
+					</div>
+				</a>
+				<a href="#" class="review">
+					<img src="../medias/images/vincent_lindon.jpg" alt="">
+					<div class="overlay">
+						<span class="note">5</span>
+						<span class="name">Evan Peuvergne</span>
+					</div>
+				</a>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="page page-review scroll show">
+
+		<a href="#" class="close">
+			<img src="/assets/front/medias/images/close.svg" alt="">
+		</a>
+
+		<div class="content">
+
+			<div class="review-author">
+				<img src="../medias/images/vincent_lindon.jpg" alt="">
+				<div class="overlay">
+					<h2>Evan Peuvergne</h2>
+					<span class="date">Il y a 2 jours</span>
+				</div>
+				<span class="note">1</span>
+			</div>
+			<p class="review-content">
+				<span>4/5.</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium nobis eius nulla fugit, qui libero dolorem quaerat maiores mollitia, veniam possimus, ut iure deserunt odit ex repellendus, harum quas voluptates.
+			</p>
+
+			<form action="#" class="review-response">
+				<span>Your answer</span>
+				<textarea id="" placeholder="Entrez votre réponse ici"></textarea>
+				<input type="submit" value="Publier avec Facebook">
+			</form>
+
+			<div class="review-responses">
+				<span>Responses</span>
+				<div class="response">
+					<img src="../medias/images/vincent_lindon.jpg" alt="">
+					<p><span>Evan Peuvergne</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel quasi mollitia officiis id cum aliquam distinctio reprehenderit, suscipit deleniti, beatae, aliquid voluptate in perferendis odit quam magnam sapiente eos. Sit?</p>
+				</div>
+				<div class="response">
+					<img src="../medias/images/vincent_lindon.jpg" alt="">
+					<p><span>Evan Peuvergne</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel quasi mollitia officiis id cum aliquam distinctio reprehenderit, suscipit deleniti, beatae, aliquid voluptate in perferendis odit quam magnam sapiente eos. Sit?</p>
+				</div>
+				<div class="response">
+					<img src="../medias/images/vincent_lindon.jpg" alt="">
+					<p><span>Evan Peuvergne</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel quasi mollitia officiis id cum aliquam distinctio reprehenderit, suscipit deleniti, beatae, aliquid voluptate in perferendis odit quam magnam sapiente eos. Sit?</p>
+				</div>
+			</div>
+			
+		</div>
+
+	</div>
+
+	<div class="loader">
+		<div class="progress"></div>
+	</div>
+
+</body>
+
+</html>
+
+
+<script src="../js/libraries/jquery.js"></script>
+<script src="../js/libraries/mousewheel.js"></script>
+<script src="../js/libraries/scrollpane.js"></script>
+
+<script>
+	
+
+	$(document).ready(function ()
+	{
+
+		$('.scroll').jScrollPane({
+			// contentWidth: '0px',
+			verticalDragMaxHeight: 100,
+			verticalDragMinHeight: 100
+		});
+
+		$('.hamburger').click(function (e)
+		{
+			e.preventDefault();
+			if($(this).hasClass('opened'))
+			{ 
+				$(this).removeClass('opened');
+				$('nav').addClass('closed').removeClass('opened');
+
+				setTimeout(function ()
+				{
+					$('nav').removeClass('closed');
+				}, 1000);
+			}
+			else
+			{
+				$(this).addClass('opened'); 
+				$('nav').addClass('opened').removeClass('closed');
+			}
+		});	
+
+		$('nav a').click(function (e)
+		{
+			e.preventDefault();
+			$('.page').remove();
+			$('nav').addClass('closed').removeClass('opened');
+			$('body').addClass('loading').removeClass('loaded');
+		});
+
+		$('.reviews').height($('body').height());
+
+	});
+
+
+</script>

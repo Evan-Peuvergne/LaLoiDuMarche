@@ -1,0 +1,66 @@
+
+
+	// README
+
+	Rendu projet silex 
+
+
+
+
+	// DESC
+
+	Ce site présente le film "La loi du marché" de Stéphane brizé (par ailleurs, un excellent film). Il utilise Silex pour toute le partie backend (mini API).
+	Il n'utilise par contre que très peu Twig (mis à part pour servir le layout principal) mais plutôt Handlebar qui est moteur de templates JavaScript.
+
+	Je sais que le sujet principal du devoir était Silex mais je n'ai pu m'empêcher de l'expérimenter avec une grosse architecture front.
+
+
+
+
+	// Recommandations
+
+	Le site necessite 2 éléments pour fonctionner : 
+		* Export de la base de donnée adaptée (disponible à la racine du projet sous le nom "hetic_projet_site_film.sql")
+		* Url de test de type http://localhost:8888 (afin que la connexion facebook fonctionne)
+
+
+
+
+	// Fonctionnalités
+
+	Le site présente 6 pages réparties en 4 sections.
+
+	Front : 
+		* Système de routing pour l'interface fait "à la main"
+		* Transitions Full Ajax avec loading
+		* Site entièment responsive (à priori) au rafraichissement de la page
+
+	Back : 
+		* Routing Api grâce à Silex
+		* Création d'un système de modèles héritant d'un modèle principal permettant de 	gérer rapidement les principaux cas
+		* Création d'un système de dates relatives
+
+
+
+	// Sections
+
+	* Home : Bouton de visualisation du trailer
+	* Film : Synosis + Infos + Casting + Slide photos dynamique
+	* Visualisation des news avec gestion du nombre de vues et contenu dynamique
+	* Présentation d'une grille de critiques cinématographiques reconnus, possibilité de visualiser leurs critiques et de les commenter avec connexion facebook
+
+
+
+	// Problèmes
+
+	* Page de page 404 pour le moment
+	* Amélioration de l'effet visuel du loader avec un indicateur numérique + fluidification
+	* Création d'un vrai backend pour gérer le contenu du site simplement
+
+
+
+
+
+	Merci
+
+	EVan PEUVERGNE

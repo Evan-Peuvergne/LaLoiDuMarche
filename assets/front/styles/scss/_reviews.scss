@@ -1,0 +1,284 @@
+	
+
+	/* CONTAINER */
+
+
+	&{
+
+		width:100%;
+
+		.container{
+
+			width:100%;
+
+			h1{
+
+				position:absolute;
+				z-index:300;
+				top:$container-padding;
+				left:$container-padding;
+				color:rgba($white, 0.6);
+				pointer-events:none;
+
+			}
+
+			.reviews{
+
+				width:calc(100% + 16px);
+
+			}	
+
+		}
+
+
+		// Filter
+
+		&:after{
+
+			display: none;
+			content:'';
+			position:absolute;
+			z-index:2000;
+			top:0;
+			left:0;
+			bottom:0;
+			right:0;
+			background-color:rgba($black, 0.7);
+
+		}
+
+	}
+
+
+
+
+
+
+	/* REVIEWS */
+
+
+	.reviews{
+
+		display: flex;
+		flex-wrap: wrap;
+		align-content:flex-start;
+		position:relative;
+
+		.review{
+
+			display: block;
+			display: inline-block;
+			width:25%;
+			height:auto;
+			position:relative;
+			text-decoration: none;
+			transition:all 0.3s ease;
+			animation-name:'SlideIn';
+			animation-duration:0.6s;
+			animation-timing-function:ease;
+			animation-fill-mode:both;
+
+			@for $i from 1 to 15{
+
+				&:nth-child(#{$i}){
+
+					animation-delay:1s + $i*0.1s;
+
+				}
+
+			}
+
+			&:after{
+
+				display: block;
+				content:'';
+				position:absolute;
+				z-index:100;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				background-color:rgba($black, 0.5);
+
+			}
+
+			img{
+
+				display: block;
+				width:100%;
+				height:auto;
+
+			}
+
+			.overlay{
+
+				position:absolute;
+				z-index:150;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				background-color:rgba($black, 0.7);
+				opacity:0;
+				transition:opacity 0.3s ease;
+
+				span.note{
+
+					position:absolute;
+					top:0;
+					left:0;
+					width:100%;
+					height:100%;
+					display: flex;
+					align-items:center;
+					justify-content:center;
+					font-family: $font-serif;
+					font-size:1500%;
+					color:rgba($white, 0.2);
+
+				}
+
+				span.name{
+
+					position:absolute;
+					top:0;
+					left:10%;
+					width:80%;
+					height:100%;
+					display: flex;
+					align-items:center;
+					justify-content:center;
+					color:rgba($white, 0.7);
+					text-transform: uppercase;
+					font-size:1.5rem;
+					letter-spacing: 0.4rem;
+					text-align:center;
+					line-height:1.5;
+
+				}
+
+			}
+
+
+			// Responsive
+
+			@media (max-width: 900px){ width:33.3333333%; }
+
+			@media (max-width: 700px){ width:50%; }
+
+			@media (max-width:500px){ width:100%; }
+
+
+			// Animation
+
+			&:hover{
+
+				.overlay{
+
+					opacity:1;
+
+					span{
+
+						animation-name:'SlideIn';
+						animation-duration:0.3s;
+						animation-timing-function:ease;
+						animation-fill-mode:both;
+
+						&.name{
+
+							animation-delay:0.1s;
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+
+
+
+	/* UNFOLD */
+
+
+	&.disabled{
+
+
+		// Filter
+
+		&:after{
+
+			display: block;
+			animation-name:'FadeIn';
+			animation-duration:0.3s;
+			animation-timing-function:ease;
+			animation-fill-mode:both;
+
+		}
+
+
+		// Close
+
+		.close{
+
+			position:absolute;
+			z-index:2200;
+			top:$container-padding;
+			right:calc(300px + #{2*$container-padding} + 2rem);
+			width:30px;
+			height:30px;
+			animation-name:'ReviewEnter';
+			animation-duration:0.5s;
+			animation-timing-function:ease;
+			animation-fill-mode:both;
+			animation-delay:0.5s;
+
+			img{
+
+				display: block;
+				width:100%;
+				height:auto;
+
+			}
+
+		}
+
+	}
+
+	&.active{
+
+		
+		// Filter
+
+		&:after{
+			
+			display: block;
+			animation-name:'FadeOut';
+			animation-duration:0.5s;
+			animation-timing-function:ease;
+			animation-fill-mode:both;			
+
+		}
+
+
+		// Close
+
+		.close{
+
+			animation-name:'ReviewLeave';
+			animation-duration:0.4s;
+			animation-timing-function:ease;
+			animation-fill-mode:both;
+
+		}
+
+
+	}
+
